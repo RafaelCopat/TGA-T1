@@ -1,8 +1,8 @@
+
 /**
  * Created by I852780 on 06/09/2016.
  */
 
-import java.util.BitSet;
 import java.util.HashMap;
 
 public class EliasGamma {
@@ -24,9 +24,9 @@ public class EliasGamma {
         return codeAux;
     }
 
-    private String createStringWithNZeros(int n) {
+    private String createStringWithNZeros(int numberOfZeros) {
         String filledWithZeros = "";
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < numberOfZeros; i++) {
             filledWithZeros = filledWithZeros + "0";
         }
         return filledWithZeros;
@@ -73,5 +73,29 @@ public class EliasGamma {
 
     public String getCode() {
         return code;
+    }
+
+    public byte[] getCodeInByteArray() {
+        double codeLength = code.length()/8.0;
+        byte[] bytesInCode = new byte[(int)Math.ceil(codeLength)];//Size of Code/8 (bits of byte)
+        for(int nextByte = 0; nextByte < bytesInCode.length; nextByte++){
+            if(!(0 == (code.length() % 8)) && nextByte == bytesInCode.length-1){
+                bytesInCode[nextByte] = getNextNBitsOfCodeThenAddZeros(nextByte, code.length()-nextByte*8);
+            }
+            else {
+                bytesInCode[nextByte] = getNext8BitsOfCode(nextByte);
+            }
+        }
+        return bytesInCode;
+    }
+
+    private byte getNextNBitsOfCodeThenAddZeros(int nextByte, int numberOfCharsLeft) {
+        String partialCode = code.substring(nextByte*8, nextByte*8+numberOfCharsLeft);
+        partialCode += createStringWithNZeros(8-numberOfCharsLeft);
+        return (byte) Integer.parseInt(partialCode,2);
+    }
+
+    private byte getNext8BitsOfCode(int nextByte) {
+        return (byte) Integer.parseInt(code.substring(nextByte*8, nextByte*8+8),2);
     }
 }

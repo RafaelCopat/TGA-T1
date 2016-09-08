@@ -37,6 +37,13 @@ public class EliasGammaTest {
         eliasGamma.codeAString("dD");
     }
 
+
+    @Test
+    public void codeThreeLetters(){
+        eliasGamma.codeAString("abb");
+        assertEquals("1010010", eliasGamma.getCode());
+    }
+
     @Test
     public void codeAll(){
         eliasGamma.codeAString("ebbbbbbaaaaaaaaaaaaaaaacccdd");
@@ -44,9 +51,19 @@ public class EliasGammaTest {
     }
 
     @Test
-    public void codeThreeLetter(){
-        eliasGamma.codeAString("abb");
-        assertEquals("1010010", eliasGamma.getCode());
+    public void codeABConvertToByte(){
+        eliasGamma.codeAString("ab");
+        byte a[] = eliasGamma.getCodeInByteArray();
+        assertEquals(-96, a[0]);
+
+    }
+
+    @Test
+    public void codeBACDEConvertToByte(){
+        eliasGamma.codeAString("bacde");
+        byte a[] = eliasGamma.getCodeInByteArray();
+        int sum = a[0] + a[1] + a[2];
+        assertEquals(24, sum);
     }
 
     @Ignore
