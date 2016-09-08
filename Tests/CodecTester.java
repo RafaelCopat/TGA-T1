@@ -25,7 +25,15 @@ public class CodecTester {
     @Test
     public void codeAWriteFile(){
         try {
+            //#TODO save hashmap values to file to help in decoding
+            //#TODO must verify how to get numericvalue to transform into char
             DataInputStream is = new DataInputStream(new FileInputStream(codec.codeFile(eliasgamma)));
+            char c = 10;
+            System.out.println(Character.getNumericValue('a'));
+            System.out.println(c);
+            System.out.println(is.readByte());
+            System.out.println(is.readByte());
+            System.out.println(is.readByte());
             assertEquals(-128 , is.readByte());
         } catch (IOException e) {
             e.printStackTrace();

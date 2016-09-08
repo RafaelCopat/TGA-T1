@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.HashMap;
 
 /**
  * Created by I852780 on 08/09/2016.
@@ -22,16 +23,22 @@ public class Codec {
         putStringsInMap(codemethod);
         codemethod.generateSymbolNumberHashmap();
         codeStrings(codemethod);
-        return codeToByteArray(codemethod);
+        return writeToFile(codemethod);
     }
 
-    private String codeToByteArray(CodeMethod codemethod) throws IOException {
+    private String writeToFile(CodeMethod codemethod) throws IOException {
         byte[] bytes = codemethod.getCodeLikeByteArray();
         DataOutputStream os = new DataOutputStream(new FileOutputStream("C:\\Users\\I852780\\IdeaProjects\\TeoriaInformacao\\binout.dat"));
+        HashMap <Character, Integer> hashmap = codemethod.getHashMap();
+        os.writeByte(hashmap.size());
+        for(char key : hashmap.keySet()){
+            os.writeByte(Character.getNumericValue(key));
+        }
         os.write(bytes);
         os.close();
         return "C:\\Users\\I852780\\IdeaProjects\\TeoriaInformacao\\binout.dat";
     }
+
 
     private void codeStrings(CodeMethod codemethod) throws IOException {
         String nextLine;

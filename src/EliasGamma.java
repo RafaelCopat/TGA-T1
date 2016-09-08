@@ -86,6 +86,11 @@ public class EliasGamma implements CodeMethod {
         return bytesInCode;
     }
 
+    @Override
+    public HashMap<Character, Integer> getHashMap() {
+        return symbolNumberHashmap;
+    }
+
     private void putBytesInArray(byte[] bytesInCode, int nextByte) {
         if (!(0 == (code.length() % 8)) && nextByte == bytesInCode.length - 1)
             bytesInCode[nextByte] = getNextNBitsOfCodeThenAddZeros(nextByte, code.length() - nextByte * 8);
