@@ -53,31 +53,32 @@ public class EliasGammaTest {
     @Test
     public void codeABConvertToByte(){
         eliasGamma.codeAString("ab");
-        byte a[] = eliasGamma.getCodeInByteArray();
-        assertEquals(-96, a[0]);
+        byte bytes[] = eliasGamma.getCodeLikeByteArray();
+        assertEquals(-96, bytes[0]);
 
     }
 
     @Test
     public void codeBACDEConvertToByte(){
         eliasGamma.codeAString("bacde");
-        byte a[] = eliasGamma.getCodeInByteArray();
-        int sum = a[0] + a[1] + a[2];
+        byte bytes[] = eliasGamma.getCodeLikeByteArray();
+        int sum = 0;
+        for(int i = 0; i < bytes.length; i++){
+            sum += bytes[i];
+        }
         assertEquals(24, sum);
     }
 
-    @Ignore
     @Test
-    public void a() throws IOException {
-        DataOutputStream os = new DataOutputStream(new FileOutputStream("C:\\Users\\I852780\\IdeaProjects\\TeoriaInformacao\\binout.dat"));
-        byte a = 20;
-        os.write(a);
-        os.write(a);
-        DataInputStream is = new DataInputStream(new FileInputStream("C:\\Users\\I852780\\IdeaProjects\\TeoriaInformacao\\binout.dat"));
-       System.out.println( Integer.toBinaryString(is.readByte()));
-        System.out.println( Integer.toBinaryString(is.readByte()));
+    public void codeAllBytes(){
+        eliasGamma.codeAString("ebbbbbbaaaaaaaaaaaaaaaacccdd");
+        byte bytes[] = eliasGamma.getCodeLikeByteArray();
+        int sum = 0;
+        for(int i = 0; i < bytes.length; i++){
+            sum += bytes[i];
+        }
+        assertEquals(145, sum);
     }
-
 
 
 

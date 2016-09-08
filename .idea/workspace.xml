@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fe29f7b-b5a7-4153-b599-41e0b6ecf350" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/binout.dat" afterPath="$PROJECT_DIR$/binout.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/EliasGammaTest.java" afterPath="$PROJECT_DIR$/Tests/EliasGammaTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EliasGamma.java" afterPath="$PROJECT_DIR$/src/EliasGamma.java" />
@@ -31,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EliasGammaTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EliasGammaTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/EliasGammaTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="1122">
+              <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -43,21 +44,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Byte.class" pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/java/lang/Byte.class">
+      <file leaf-file-name="CodecTester.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tests/CodecTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="833">
+              <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestCase.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/TestCase.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+              <folding>
+                <element signature="e#5632#5633#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Assert.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/Assert.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="239">
-              <caret line="322" column="0" selection-start-line="322" selection-start-column="0" selection-end-line="322" selection-end-column="0" />
+              <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataInputStream.class" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/java/io/DataInputStream.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Codec.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Codec.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -66,23 +101,11 @@
       <file leaf-file-name="EliasGamma.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EliasGamma.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="961">
-              <caret line="94" column="54" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+            <state relative-caret-position="867">
+              <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
               <folding>
-                <element signature="e#0#3373#0" expanded="true" />
-                <element signature="e#2284#2285#0" expanded="true" />
-                <element signature="e#2311#2312#0" expanded="true" />
+                <element signature="e#0#3517#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockJUnit4ClassRunner.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153">
-              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -93,6 +116,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -114,8 +138,11 @@
         <option value="$PROJECT_DIR$/Tests/LogarithmTest.java" />
         <option value="$PROJECT_DIR$/src/Logarithm.java" />
         <option value="$PROJECT_DIR$/src/FakeLogarithm.java" />
-        <option value="$PROJECT_DIR$/src/EliasGamma.java" />
+        <option value="$PROJECT_DIR$/src/CodeMethod.java" />
         <option value="$PROJECT_DIR$/Tests/EliasGammaTest.java" />
+        <option value="$PROJECT_DIR$/src/EliasGamma.java" />
+        <option value="$PROJECT_DIR$/src/Codec.java" />
+        <option value="$PROJECT_DIR$/Tests/CodecTester.java" />
       </list>
     </option>
   </component>
@@ -139,7 +166,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -185,6 +212,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeoriaInformacao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TeoriaInformacao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -194,7 +235,9 @@
       <pane id="PackagesPane">
         <subPane />
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scratches">
+        <subPane />
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -205,6 +248,7 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="SearchEverywhereHistoryKey" value="github&#9;ACTION&#9;Github.Share" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -221,27 +265,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="EliasGammaTest.getByteArrayInOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="TeoriaInformacao" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="EliasGammaTest" />
-      <option name="METHOD_NAME" value="getByteArrayInOrder" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -304,6 +327,27 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="EliasGammaTest" />
       <option name="METHOD_NAME" value="codeBACDEConvertToByte" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="CodecTester.codeAWriteFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="TeoriaInformacao" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CodecTester" />
+      <option name="METHOD_NAME" value="codeAWriteFile" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -563,18 +607,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in TeoriaInformacao" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.getByteArrayInOrder" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.codeABConvertToByte" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.name" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.codeBACDEConvertToByte" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.codeABConvertToByte" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.name" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.codeBACDEConvertToByte" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CodecTester.codeAWriteFile" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in TeoriaInformacao" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.codeABConvertToByte" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.name" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.codeBACDEConvertToByte" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.getByteArrayInOrder" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CodecTester.codeAWriteFile" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.codeABConvertToByte" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.name" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EliasGammaTest.codeBACDEConvertToByte" />
       </list>
     </recent_temporary>
   </component>
@@ -595,35 +639,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 16h 58m 56s.xml">
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 18h 12m 18s.xml">
       <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 17h 00m 06s.xml">
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 18h 20m 00s.xml">
       <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 17h 02m 12s.xml">
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 18h 23m 14s.xml">
       <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 17h 07m 27s.xml">
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 18h 24m 57s.xml">
       <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EliasGammaTest_codeABConvertToByte - 2016.09.08 at 17h 03m 23s.xml">
-      <configuration name="EliasGammaTest.codeABConvertToByte" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 18h 26m 46s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EliasGammaTest_codeABConvertToByte - 2016.09.08 at 17h 03m 26s.xml">
-      <configuration name="EliasGammaTest.codeABConvertToByte" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 18h 27m 41s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EliasGammaTest_codeABConvertToByte - 2016.09.08 at 17h 06m 22s.xml">
-      <configuration name="EliasGammaTest.codeABConvertToByte" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.08 at 18h 28m 17s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EliasGammaTest_codeBACDEConvertToByte - 2016.09.08 at 16h 50m 20s.xml">
-      <configuration name="EliasGammaTest.codeBACDEConvertToByte" configurationId="JUnit" />
+    <history-entry file="CodecTester_codeAWriteFile - 2016.09.08 at 18h 10m 48s.xml">
+      <configuration name="CodecTester.codeAWriteFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EliasGammaTest_name - 2016.09.08 at 16h 57m 50s.xml">
-      <configuration name="EliasGammaTest.name" configurationId="JUnit" />
+    <history-entry file="CodecTester_codeAWriteFile - 2016.09.08 at 18h 11m 07s.xml">
+      <configuration name="CodecTester.codeAWriteFile" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="EliasGammaTest_name - 2016.09.08 at 16h 58m 42s.xml">
-      <configuration name="EliasGammaTest.name" configurationId="JUnit" />
+    <history-entry file="CodecTester_codeAWriteFile - 2016.09.08 at 18h 12m 07s.xml">
+      <configuration name="CodecTester.codeAWriteFile" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -639,7 +683,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16573349" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -673,7 +717,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="24" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Codec.java</url>
+          <line>20</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -705,9 +757,7 @@
         <state relative-caret-position="1071">
           <caret line="66" column="15" selection-start-line="66" selection-start-column="15" selection-end-line="66" selection-end-column="15" />
           <folding>
-            <element signature="e#0#3373#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
-            <element signature="e#2311#2312#0" expanded="true" />
+            <element signature="e#0#3517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -743,9 +793,7 @@
         <state relative-caret-position="969">
           <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
           <folding>
-            <element signature="e#0#3373#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
-            <element signature="e#2311#2312#0" expanded="true" />
+            <element signature="e#0#3517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -773,9 +821,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3373#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
-            <element signature="e#2311#2312#0" expanded="true" />
+            <element signature="e#0#3517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -822,9 +868,7 @@
         <state relative-caret-position="306">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#0#3373#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
-            <element signature="e#2311#2312#0" expanded="true" />
+            <element signature="e#0#3517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -853,14 +897,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="708" column="0" selection-start-line="708" selection-start-column="0" selection-end-line="708" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/java/lang/Byte.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -894,6 +930,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/java/lang/Byte.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-153">
@@ -902,22 +946,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/CodeMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/EliasGamma.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="94" column="54" selection-start-line="94" selection-start-column="54" selection-end-line="94" selection-end-column="54" />
+        <state relative-caret-position="867">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
           <folding>
-            <element signature="e#0#3373#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
-            <element signature="e#2311#2312#0" expanded="true" />
+            <element signature="e#0#3517#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/EliasGammaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state relative-caret-position="1122">
+          <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/Assert.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/java/io/DataInputStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/TestCase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding>
+            <element signature="e#5632#5633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/CodecTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="5" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

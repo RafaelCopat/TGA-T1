@@ -5,11 +5,13 @@
 
 import java.util.HashMap;
 
-public class EliasGamma {
+public class EliasGamma implements CodeMethod {
 
     private String code;
     private HashMap<Character, Integer> frequencyHashmap;
     private HashMap<Character, Integer> symbolNumberHashmap;
+
+
 
     public EliasGamma() {
         frequencyHashmap = new HashMap<>();
@@ -33,18 +35,20 @@ public class EliasGamma {
     }
 
     public void setStringToMap(String string) {
+        for (char aChar : string.toCharArray()) putCharToMap(aChar);
+    }
 
-        char[] chars = string.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            if (frequencyHashmap.containsKey(chars[i])) {
-                int numberOfTimesAppearingInText = frequencyHashmap.get(chars[i]);
-                numberOfTimesAppearingInText = numberOfTimesAppearingInText + 1;
-                frequencyHashmap.put(chars[i], numberOfTimesAppearingInText);
+    private void putCharToMap(char aChar) {
+        if (frequencyHashmap.containsKey(aChar))
+            updateExistingChar(aChar);
+        else
+            frequencyHashmap.put(aChar, 1);
+    }
 
-            } else {
-                frequencyHashmap.put(chars[i], 1);
-            }
-        }
+    private void updateExistingChar(char aChar) {
+        int numberOfTimesAppearingInText = frequencyHashmap.get(aChar);
+        numberOfTimesAppearingInText = numberOfTimesAppearingInText + 1;
+        frequencyHashmap.put(aChar, numberOfTimesAppearingInText);
     }
 
     public void generateSymbolNumberHashmap() {
@@ -70,23 +74,23 @@ public class EliasGamma {
         }
     }
 
-
     public String getCode() {
         return code;
     }
 
-    public byte[] getCodeInByteArray() {
+    public byte[] getCodeLikeByteArray() {
         double codeLength = code.length()/8.0;
         byte[] bytesInCode = new byte[(int)Math.ceil(codeLength)];//Size of Code/8 (bits of byte)
-        for(int nextByte = 0; nextByte < bytesInCode.length; nextByte++){
-            if(!(0 == (code.length() % 8)) && nextByte == bytesInCode.length-1){
-                bytesInCode[nextByte] = getNextNBitsOfCodeThenAddZeros(nextByte, code.length()-nextByte*8);
-            }
-            else {
-                bytesInCode[nextByte] = getNext8BitsOfCode(nextByte);
-            }
-        }
+        for(int nextByte = 0; nextByte < bytesInCode.length; nextByte++)
+            putBytesInArray(bytesInCode, nextByte);
         return bytesInCode;
+    }
+
+    private void putBytesInArray(byte[] bytesInCode, int nextByte) {
+        if (!(0 == (code.length() % 8)) && nextByte == bytesInCode.length - 1)
+            bytesInCode[nextByte] = getNextNBitsOfCodeThenAddZeros(nextByte, code.length() - nextByte * 8);
+        else
+            bytesInCode[nextByte] = getNext8BitsOfCode(nextByte);
     }
 
     private byte getNextNBitsOfCodeThenAddZeros(int nextByte, int numberOfCharsLeft) {
