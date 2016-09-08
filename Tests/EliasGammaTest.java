@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -11,28 +12,31 @@ public class EliasGammaTest {
 
     @Before
     public void setUp() throws Exception {
-       eliasGamma = new EliasGamma();
+        eliasGamma = new EliasGamma();
+        eliasGamma.setStringToMap("ebbbbbbaaaaaaaaaaaaaaaacccdd");
+        eliasGamma.generateSymbolNumberHashmap();
     }
-
-    @Test
-    public void getNumberForA(){
-        assertEquals( 1 , NumericRepresentation.getSymbolNumber('a'));
-    }
-
-    @Test
-    public void getNumberForB(){
-        assertEquals( 18 , NumericRepresentation.getSymbolNumber('b'));
-    }
-
 
     @Test
     public void codeLetterA(){
         assertEquals( "1" , eliasGamma.code('a'));
     }
 
-    //@Test
-    //public void codeLetterE(){
-    //    assertEquals( "010" , eliasGamma.code('e'));
-    //}
+    @Test
+    public void codeLetterB(){
+        assertEquals( "010" , eliasGamma.code('b'));
+    }
+
+    @Test
+    public void codeLetterE(){
+        assertEquals( "00101" , eliasGamma.code('e'));
+    }
+
+    @Ignore
+    @Test
+    public void codeLetterS(){
+        assertEquals( "00000111011" , eliasGamma.code('S'));
+    }
+
 
 }

@@ -6,6 +6,11 @@ import static org.junit.Assert.assertEquals;
  * Created by I852780 on 06/09/2016.
  */
 public class LogarithmTest {
+
+    @Test
+    public void zeroLogOfTwo() {
+        assertEquals(0, Logarithm.logBase2(0));
+    }
     @Test
     public void twoLogOfTwo() {
         assertEquals(1, Logarithm.logBase2(2));

@@ -4,9 +4,8 @@
 public class Logarithm {
     public static int logBase2(int n) {
         int result;
-        for(result = 0; n >= 2; result++){
+        for(result = 0; n >= 2; result++)
             n = n/2;
-        }
         return result;
     }
 }
