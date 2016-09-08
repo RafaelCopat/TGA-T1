@@ -4,25 +4,24 @@
 
 import java.util.BitSet;
 import java.util.HashMap;
-import java.util.Map;
 
 public class EliasGamma {
 
-
-    private BitSet bitset;
+    private String code;
     private HashMap<Character, Integer> frequencyHashmap;
     private HashMap<Character, Integer> symbolNumberHashmap;
 
     public EliasGamma() {
-        bitset = new BitSet();
         frequencyHashmap = new HashMap<>();
         symbolNumberHashmap = new HashMap<>();
+        code = "";
     }
 
-    public String code(char symbol) {
+    private String codeAChar(char symbol) {
         int symbolNumber = symbolNumberHashmap.get(symbol);
-        String code = createStringWithNZeros(Logarithm.logBase2(symbolNumber));
-        return code + Integer.toBinaryString(symbolNumber);
+        String codeAux = createStringWithNZeros(FakeLogarithm.logBase2(symbolNumber));
+        codeAux = codeAux + Integer.toBinaryString(symbolNumber);
+        return codeAux;
     }
 
     private String createStringWithNZeros(int n) {
@@ -63,7 +62,16 @@ public class EliasGamma {
             frequencyHashmap.remove(frequentKey);
             highestFrequency = 0;
         }
+    }
+
+    public void codeAString(String ab) {
+        for(int i = 0; i < ab.length(); i++){
+            code += codeAChar(ab.charAt(i));
+        }
+    }
 
 
+    public String getCode() {
+        return code;
     }
 }

@@ -2,6 +2,9 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+
+import java.io.*;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -18,25 +21,47 @@ public class EliasGammaTest {
     }
 
     @Test
-    public void codeLetterA(){
-        assertEquals( "1" , eliasGamma.code('a'));
+    public void codeALetter() {
+        eliasGamma.codeAString("e");
+        assertEquals( "00101", eliasGamma.getCode());
     }
 
     @Test
-    public void codeLetterB(){
-        assertEquals( "010" , eliasGamma.code('b'));
+    public void codeTwoLetters(){
+        eliasGamma.codeAString("ab");
+        assertEquals( "1010", eliasGamma.getCode());
+    }
+
+    @Test(expected = NullPointerException.class)
+    public void codeTwoLettersError() {
+        eliasGamma.codeAString("dD");
     }
 
     @Test
-    public void codeLetterE(){
-        assertEquals( "00101" , eliasGamma.code('e'));
+    public void codeAll(){
+        eliasGamma.codeAString("ebbbbbbaaaaaaaaaaaaaaaacccdd");
+        assertEquals("0010101001001001001001011111111111111110110110110010000100", eliasGamma.getCode());
+    }
+
+    @Test
+    public void codeThreeLetter(){
+        eliasGamma.codeAString("abb");
+        assertEquals("1010010", eliasGamma.getCode());
     }
 
     @Ignore
     @Test
-    public void codeLetterS(){
-        assertEquals( "00000111011" , eliasGamma.code('S'));
+    public void a() throws IOException {
+        DataOutputStream os = new DataOutputStream(new FileOutputStream("C:\\Users\\I852780\\IdeaProjects\\TeoriaInformacao\\binout.dat"));
+        byte a = 20;
+        os.write(a);
+        os.write(a);
+        DataInputStream is = new DataInputStream(new FileInputStream("C:\\Users\\I852780\\IdeaProjects\\TeoriaInformacao\\binout.dat"));
+       System.out.println( Integer.toBinaryString(is.readByte()));
+        System.out.println( Integer.toBinaryString(is.readByte()));
     }
+
+
 
 
 }
