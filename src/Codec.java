@@ -28,14 +28,21 @@ public class Codec {
 
     private String writeToFile(CodeMethod codemethod) throws IOException {
         byte[] bytes = codemethod.getCodeLikeByteArray();
+        File outputFile = new File("eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat");
         DataOutputStream os = new DataOutputStream(new FileOutputStream(
-                "eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat"));
-        HashMap<Character, Integer> hashmap = codemethod.getHashMap();
-        os.writeByte(hashmap.size());
-        printHashmapToFile(os, hashmap);
+                outputFile));
+        writeHashmapIfEmpty(codemethod, os, outputFile);
         os.write(bytes);
         os.close();
         return "eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat";
+    }
+
+    private void writeHashmapIfEmpty(CodeMethod codemethod, DataOutputStream os, File outputFile) throws IOException {
+            if(outputFile.length() == 0) {
+                HashMap<Character, Integer> hashmap = codemethod.getHashMap();
+                os.writeByte(hashmap.size());
+                printHashmapToFile(os, hashmap);
+            }
     }
 
     private void printHashmapToFile(DataOutputStream os, HashMap<Character, Integer> hashmap) throws IOException {
@@ -66,7 +73,6 @@ public class Codec {
             brokenBinary = Integer.toBinaryString(partialCode);
             codeInBinary = reforgeBinary(codeInBinary, brokenBinary);
         }
-
         String decodedText = codemethod.decodeBytes(codeInBinary);
         FileWriter fw = new FileWriter("decoded_" + fileToBeManaged.getName() + ".txt");
         fw.write(decodedText);
@@ -102,6 +108,7 @@ public class Codec {
         nextLine = bufferedReader.readLine();
         while (nextLine != null) {
             codemethod.codeAString(nextLine+'\n');
+            System.out.println("Coding String: "+nextLine);
             nextLine = bufferedReader.readLine();
         }
     }
@@ -110,7 +117,7 @@ public class Codec {
         String nextLine = bufferedReader.readLine();
         while (nextLine != null) {
             codemethod.setStringToMap(nextLine+'\n');
-
+            System.out.println("Putting in map: "+nextLine);
             nextLine = bufferedReader.readLine();
         }
     }

@@ -1,3 +1,4 @@
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -102,5 +103,23 @@ public class CodecTester {
                         "\n" +
                         "Donec leo elit, accumsan nec posuere eget, auctor at ex. Suspendisse potenti. Sed magna odio, suscipit non volutpat et, consequat ac quam. Duis tellus nisi, hendrerit ac molestie at, lacinia sit amet lectus. Sed ultrices, urna sed luctus efficitur, nisl orci rutrum ante, et facilisis lectus felis id massa. Integer eget accumsan augue, non tincidunt justo. Duis erat nulla, consequat a purus quis, tincidunt ornare velit. Etiam lobortis at ex ut bibendum. Curabitur a augue venenatis augue tincidunt hendrerit. Maecenas tincidunt dignissim massa, tempus efficitur lectus porttitor sed. Aenean eros diam, egestas et elit a, mattis rutrum nulla. Morbi vel dolor ex. Proin mollis nibh lorem, sit amet blandit metus vehicula ac. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n"
                 , text);
+    }
+
+    @Ignore
+    @Test
+    public void codeDecodeHugeFile() throws IOException{
+        file = new File("hugefile.txt");
+        codec.setFile(file);
+        file = new File(codec.codeFile(eliasgamma));
+        codec.setFile(file);
+        file = new File(codec.decodeFile(eliasgamma));
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String nextLine = br.readLine();
+        String text = "";
+        while (nextLine != null) {
+            text += nextLine+'\n';
+            nextLine = br.readLine();
+        }
+        System.out.println(text);
     }
 }
