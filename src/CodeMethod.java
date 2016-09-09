@@ -6,9 +6,14 @@ import java.util.HashMap;
 public interface CodeMethod {
 
     void setStringToMap(String string);
+
     void generateSymbolNumberHashmap();
+
     void codeAString(String ab);
+
     byte[] getCodeLikeByteArray();
+
+    void recoverHashmap(String string);
 
     HashMap<Character, Integer> getHashMap();
 

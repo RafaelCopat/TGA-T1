@@ -20,13 +20,13 @@ public class EliasGammaTest {
     @Test
     public void codeALetter() {
         eliasGamma.codeAString("e");
-        assertEquals( "00101", eliasGamma.getCode());
+        assertEquals("00101", eliasGamma.getCode());
     }
 
     @Test
-    public void codeTwoLetters(){
+    public void codeTwoLetters() {
         eliasGamma.codeAString("ab");
-        assertEquals( "1010", eliasGamma.getCode());
+        assertEquals("1010", eliasGamma.getCode());
     }
 
     @Test(expected = NullPointerException.class)
@@ -36,19 +36,19 @@ public class EliasGammaTest {
 
 
     @Test
-    public void codeThreeLetters(){
+    public void codeThreeLetters() {
         eliasGamma.codeAString("abb");
         assertEquals("1010010", eliasGamma.getCode());
     }
 
     @Test
-    public void codeAll(){
+    public void codeAll() {
         eliasGamma.codeAString("ebbbbbbaaaaaaaaaaaaaaaacccdd");
         assertEquals("0010101001001001001001011111111111111110110110110010000100", eliasGamma.getCode());
     }
 
     @Test
-    public void codeABConvertToByte(){
+    public void codeABConvertToByte() {
         eliasGamma.codeAString("ab");
         byte bytes[] = eliasGamma.getCodeLikeByteArray();
         assertEquals(-96, bytes[0]);
@@ -56,11 +56,11 @@ public class EliasGammaTest {
     }
 
     @Test
-    public void codeBACDEConvertToByte(){
+    public void codeBACDEConvertToByte() {
         eliasGamma.codeAString("bacde");
         byte bytes[] = eliasGamma.getCodeLikeByteArray();
         int sum = 0;
-        for(int i = 0; i < bytes.length; i++){
+        for (int i = 0; i < bytes.length; i++) {
             sum += bytes[i];
         }
         assertEquals(24, sum);
@@ -78,19 +78,19 @@ public class EliasGammaTest {
     }
 
     @Test
-    public void decode1(){
+    public void decode1() {
         assertEquals("a", eliasGamma.decodeBytes("1"));
     }
 
     @Test
-    public void decode1010(){
+    public void decode1010() {
         assertEquals("ab", eliasGamma.decodeBytes("1010"));
     }
 
     @Test
-    public void decode0010101001001001001001011111111111111110110110110010000100(){
+    public void decode0010101001001001001001011111111111111110110110110010000100() {
         assertEquals("ebbbbbbaaaaaaaaaaaaaaaacccdd",
-                      eliasGamma.decodeBytes("0010101001001001001001011111111111111110110110110010000100"));
+                eliasGamma.decodeBytes("0010101001001001001001011111111111111110110110110010000100"));
     }
 
 }

@@ -74,7 +74,7 @@ public class CodecTester {
         codec.setFile(file);
         file = new File(codec.decodeFile(eliasgamma));
         BufferedReader br = new BufferedReader(new FileReader(file));
-        assertEquals("orem"
+        assertEquals("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum, mi gravida viverra varius, purus eros dictum sem, in maximus lorem leo id nisi."
             , br.readLine());
     }
 

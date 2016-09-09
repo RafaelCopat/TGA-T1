@@ -29,42 +29,57 @@ public class Codec {
     private String writeToFile(CodeMethod codemethod) throws IOException {
         byte[] bytes = codemethod.getCodeLikeByteArray();
         DataOutputStream os = new DataOutputStream(new FileOutputStream(
-                "eliasgamma_"+ fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length()-4) + ".dat"));
-        HashMap <Character, Integer> hashmap = codemethod.getHashMap();
+                "eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat"));
+        HashMap<Character, Integer> hashmap = codemethod.getHashMap();
         os.writeByte(hashmap.size());
-        for(char key : hashmap.keySet()){
-            os.writeByte((int) key);
-        }
+        printHashmapToFile(os, hashmap);
         os.write(bytes);
         os.close();
-        return "eliasgamma_"+ fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length()-4) + ".dat";
+        return "eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat";
+    }
+
+    private void printHashmapToFile(DataOutputStream os, HashMap<Character, Integer> hashmap) throws IOException {
+        int initialSize = hashmap.size();
+        for (int i = 0; i < initialSize; i++) {
+            char charToBePrinted = 'a';
+            Integer lowestNumber = 128; //max in a byte
+            for (char key : hashmap.keySet()) {
+                if (hashmap.get(key) < lowestNumber) {
+                    lowestNumber = hashmap.get(key);
+                    charToBePrinted = key;
+                }
+            }
+            os.writeByte(charToBePrinted);
+            hashmap.remove(charToBePrinted);
+        }
     }
 
     public String decodeFile(CodeMethod codemethod) throws IOException {
         DataInputStream is = new DataInputStream(new FileInputStream(fileToBeManaged));
         int charsToBeRead = is.readByte();
         recoverHashmap(is, charsToBeRead, codemethod);
-        byte bytes[] = new byte[(int)fileToBeManaged.length()-(1+charsToBeRead)];
+        byte bytes[] = new byte[(int) fileToBeManaged.length() - (1 + charsToBeRead)];
         is.read(bytes);
         String codeInBinary = "";
         String brokenBinary = "";
-        for(byte partialCode: bytes) {
+        for (byte partialCode : bytes) {
             brokenBinary = Integer.toBinaryString(partialCode);
             codeInBinary = reforgeBinary(codeInBinary, brokenBinary);
         }
 
         String decodedText = codemethod.decodeBytes(codeInBinary);
-        FileWriter fw = new FileWriter("decoded_"+fileToBeManaged.getName()+".txt");
+        FileWriter fw = new FileWriter("decoded_" + fileToBeManaged.getName() + ".txt");
         fw.write(decodedText);
         fw.close();
-        return "decoded_"+fileToBeManaged.getName() + ".txt";
+        return "decoded_" + fileToBeManaged.getName() + ".txt";
     }
 
     private String reforgeBinary(String codeInBinary, String brokenBinary) {
         if (brokenBinary.length() == 8)
             codeInBinary += brokenBinary;
         else if (brokenBinary.length() < 8) {
-            for (int i = 0; i < 8 - brokenBinary.length(); i++)
+            int initialLength = brokenBinary.length();
+            for (int i = 0; i < 8 - initialLength; i++)
                 brokenBinary = "0" + brokenBinary;
             codeInBinary += brokenBinary;
         } else
@@ -74,11 +89,10 @@ public class Codec {
 
     private void recoverHashmap(DataInputStream is, int charsToBeRead, CodeMethod codeMethod) throws IOException {
         String recoveredHashmap = "";
-        for(int i = 0; i < charsToBeRead; i++){
-            recoveredHashmap += (char)is.readByte();
+        for (int i = 0; i < charsToBeRead; i++) {
+            recoveredHashmap += (char) is.readByte();
         }
-        codeMethod.setStringToMap(recoveredHashmap);
-        codeMethod.generateSymbolNumberHashmap();
+        codeMethod.recoverHashmap(recoveredHashmap);
 
     }
 
@@ -86,7 +100,7 @@ public class Codec {
         String nextLine;
         bufferedReader = new BufferedReader(new FileReader(fileToBeManaged));
         nextLine = bufferedReader.readLine();
-        while(nextLine != null) {
+        while (nextLine != null) {
             codemethod.codeAString(nextLine);
             nextLine = bufferedReader.readLine();
         }
@@ -94,7 +108,7 @@ public class Codec {
 
     private void putStringsInMap(CodeMethod codemethod) throws IOException {
         String nextLine = bufferedReader.readLine();
-        while(nextLine != null) {
+        while (nextLine != null) {
             codemethod.setStringToMap(nextLine);
             nextLine = bufferedReader.readLine();
         }

@@ -12,7 +12,6 @@ public class EliasGamma implements CodeMethod {
     private HashMap<Character, Integer> symbolNumberHashmap;
 
 
-
     public EliasGamma() {
         frequencyHashmap = new HashMap<>();
         symbolNumberHashmap = new HashMap<>();
@@ -55,21 +54,21 @@ public class EliasGamma implements CodeMethod {
         char frequentKey = 'a';
         int highestFrequency = 0;
         int initialSize = frequencyHashmap.size();
-        for(int i = 0; i < initialSize; i++) {
+        for (int i = 0; i < initialSize; i++) {
             for (char key : frequencyHashmap.keySet()) {
                 if (frequencyHashmap.get(key) > highestFrequency) {
                     highestFrequency = frequencyHashmap.get(key);
                     frequentKey = key;
                 }
             }
-            symbolNumberHashmap.put(frequentKey, i+1);
+            symbolNumberHashmap.put(frequentKey, i + 1);
             frequencyHashmap.remove(frequentKey);
             highestFrequency = 0;
         }
     }
 
     public void codeAString(String ab) {
-        for(int i = 0; i < ab.length(); i++){
+        for (int i = 0; i < ab.length(); i++) {
             code += codeAChar(ab.charAt(i));
         }
     }
@@ -79,11 +78,21 @@ public class EliasGamma implements CodeMethod {
     }
 
     public byte[] getCodeLikeByteArray() {
-        double codeLength = code.length()/8.0;
-        byte[] bytesInCode = new byte[(int)Math.ceil(codeLength)];//Size of Code/8 (bits of byte)
-        for(int nextByte = 0; nextByte < bytesInCode.length; nextByte++)
+        double codeLength = code.length() / 8.0;
+        byte[] bytesInCode = new byte[(int) Math.ceil(codeLength)];//Size of Code/8 (bits of byte)
+        for (int nextByte = 0; nextByte < bytesInCode.length; nextByte++)
             putBytesInArray(bytesInCode, nextByte);
         return bytesInCode;
+    }
+
+    @Override
+    public void recoverHashmap(String string) {
+        int fakeFrequency = string.length();
+        for (int i = 0; i < string.length(); i++) {
+            frequencyHashmap.put(string.charAt(i), fakeFrequency);
+            fakeFrequency--;
+        }
+        generateSymbolNumberHashmap();
     }
 
     @Override
@@ -99,20 +108,20 @@ public class EliasGamma implements CodeMethod {
     }
 
     private byte getNextNBitsOfCodeThenAddZeros(int nextByte, int numberOfCharsLeft) {
-        String partialCode = code.substring(nextByte*8, nextByte*8+numberOfCharsLeft);
-        partialCode += createStringWithNZeros(8-numberOfCharsLeft);
-        return (byte) Integer.parseInt(partialCode,2);
+        String partialCode = code.substring(nextByte * 8, nextByte * 8 + numberOfCharsLeft);
+        partialCode += createStringWithNZeros(8 - numberOfCharsLeft);
+        return (byte) Integer.parseInt(partialCode, 2);
     }
 
     private byte getNext8BitsOfCode(int nextByte) {
-        return (byte) Integer.parseInt(code.substring(nextByte*8, nextByte*8+8),2);
+        return (byte) Integer.parseInt(code.substring(nextByte * 8, nextByte * 8 + 8), 2);
     }
 
     public String decodeBytes(String byteString) {
         int zerosCount = 0;
         String textResult = "";
         String binaryResult = "";
-        for(int i = 0; i < byteString.length(); i++)
+        for (int i = 0; i < byteString.length(); i++)
             if (byteString.charAt(i) == '0')
                 zerosCount++;
             else {
