@@ -107,4 +107,33 @@ public class EliasGamma implements CodeMethod {
     private byte getNext8BitsOfCode(int nextByte) {
         return (byte) Integer.parseInt(code.substring(nextByte*8, nextByte*8+8),2);
     }
+
+    public String decodeBytes(String byteString) {
+        int zerosCount = 0;
+        String textResult = "";
+        String binaryResult = "";
+        for(int i = 0; i < byteString.length(); i++)
+            if (byteString.charAt(i) == '0')
+                zerosCount++;
+            else {
+                binaryResult += '1';
+                for (int j = 0; j < zerosCount; j++) {
+                    i++;
+                    binaryResult += byteString.charAt(i);
+                }
+                textResult = getKeyInHashmap(textResult, binaryResult);
+                binaryResult = "";
+                zerosCount = 0;
+            }
+        return textResult;
+    }
+
+    private String getKeyInHashmap(String textResult, String binaryResult) {
+        for (char key : symbolNumberHashmap.keySet())
+            if (symbolNumberHashmap.get(key) == Integer.parseInt(binaryResult, 2)) {
+                textResult += key;
+                break;
+            }
+        return textResult;
+    }
 }

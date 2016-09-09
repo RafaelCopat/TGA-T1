@@ -11,4 +11,6 @@ public interface CodeMethod {
     byte[] getCodeLikeByteArray();
 
     HashMap<Character, Integer> getHashMap();
+
+    public String decodeBytes(String string);
 }

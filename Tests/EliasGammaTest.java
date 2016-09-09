@@ -1,9 +1,6 @@
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
-
-import java.io.*;
 
 import static org.junit.Assert.assertEquals;
 
@@ -70,16 +67,32 @@ public class EliasGammaTest {
     }
 
     @Test
-    public void codeAllBytes(){
+    public void codeAllBytes() {
         eliasGamma.codeAString("ebbbbbbaaaaaaaaaaaaaaaacccdd");
         byte bytes[] = eliasGamma.getCodeLikeByteArray();
         int sum = 0;
-        for(int i = 0; i < bytes.length; i++){
+        for (int i = 0; i < bytes.length; i++) {
             sum += bytes[i];
         }
         assertEquals(145, sum);
     }
 
+    @Test
+    public void decode1(){
+        assertEquals("a", eliasGamma.decodeBytes("1"));
+    }
 
+    @Test
+    public void decode1010(){
+        assertEquals("ab", eliasGamma.decodeBytes("1010"));
+    }
+
+    @Test
+    public void decode0010101001001001001001011111111111111110110110110010000100(){
+        assertEquals("ebbbbbbaaaaaaaaaaaaaaaacccdd",
+                      eliasGamma.decodeBytes("0010101001001001001001011111111111111110110110110010000100"));
+    }
 
 }
+
+

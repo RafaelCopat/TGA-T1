@@ -6,16 +6,16 @@ import java.util.HashMap;
  */
 public class Codec {
 
-    private File fileToBeCompressed;
+    private File fileToBeManaged;
     private BufferedReader bufferedReader;
 
     public Codec(File file) throws FileNotFoundException {
-        this.fileToBeCompressed = file;
+        this.fileToBeManaged = file;
         setBufferedReader();
     }
 
     private void setBufferedReader() throws FileNotFoundException {
-        FileReader fileReader = new FileReader(fileToBeCompressed);
+        FileReader fileReader = new FileReader(fileToBeManaged);
         bufferedReader = new BufferedReader(fileReader);
     }
 
@@ -28,21 +28,63 @@ public class Codec {
 
     private String writeToFile(CodeMethod codemethod) throws IOException {
         byte[] bytes = codemethod.getCodeLikeByteArray();
-        DataOutputStream os = new DataOutputStream(new FileOutputStream("C:\\Users\\I852780\\IdeaProjects\\TeoriaInformacao\\binout.dat"));
+        DataOutputStream os = new DataOutputStream(new FileOutputStream(
+                "eliasgamma_"+ fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length()-4) + ".dat"));
         HashMap <Character, Integer> hashmap = codemethod.getHashMap();
         os.writeByte(hashmap.size());
         for(char key : hashmap.keySet()){
-            os.writeByte(Character.getNumericValue(key));
+            os.writeByte((int) key);
         }
         os.write(bytes);
         os.close();
-        return "C:\\Users\\I852780\\IdeaProjects\\TeoriaInformacao\\binout.dat";
+        return "eliasgamma_"+ fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length()-4) + ".dat";
     }
 
+    public String decodeFile(CodeMethod codemethod) throws IOException {
+        DataInputStream is = new DataInputStream(new FileInputStream(fileToBeManaged));
+        int charsToBeRead = is.readByte();
+        recoverHashmap(is, charsToBeRead, codemethod);
+        byte bytes[] = new byte[(int)fileToBeManaged.length()-(1+charsToBeRead)];
+        is.read(bytes);
+        String codeInBinary = "";
+        String brokenBinary = "";
+        for(byte partialCode: bytes) {
+            brokenBinary = Integer.toBinaryString(partialCode);
+            codeInBinary = reforgeBinary(codeInBinary, brokenBinary);
+        }
+
+        String decodedText = codemethod.decodeBytes(codeInBinary);
+        FileWriter fw = new FileWriter("decoded_"+fileToBeManaged.getName()+".txt");
+        fw.write(decodedText);
+        fw.close();
+        return "decoded_"+fileToBeManaged.getName() + ".txt";
+    }
+
+    private String reforgeBinary(String codeInBinary, String brokenBinary) {
+        if (brokenBinary.length() == 8)
+            codeInBinary += brokenBinary;
+        else if (brokenBinary.length() < 8) {
+            for (int i = 0; i < 8 - brokenBinary.length(); i++)
+                brokenBinary = "0" + brokenBinary;
+            codeInBinary += brokenBinary;
+        } else
+            codeInBinary += brokenBinary.substring(24, 32);
+        return codeInBinary;
+    }
+
+    private void recoverHashmap(DataInputStream is, int charsToBeRead, CodeMethod codeMethod) throws IOException {
+        String recoveredHashmap = "";
+        for(int i = 0; i < charsToBeRead; i++){
+            recoveredHashmap += (char)is.readByte();
+        }
+        codeMethod.setStringToMap(recoveredHashmap);
+        codeMethod.generateSymbolNumberHashmap();
+
+    }
 
     private void codeStrings(CodeMethod codemethod) throws IOException {
         String nextLine;
-        bufferedReader = new BufferedReader(new FileReader(fileToBeCompressed));
+        bufferedReader = new BufferedReader(new FileReader(fileToBeManaged));
         nextLine = bufferedReader.readLine();
         while(nextLine != null) {
             codemethod.codeAString(nextLine);
@@ -59,7 +101,7 @@ public class Codec {
     }
 
     public void setFile(File fileToBeCompressed) throws FileNotFoundException {
-        this.fileToBeCompressed = fileToBeCompressed;
+        this.fileToBeManaged = fileToBeCompressed;
         setBufferedReader();
     }
 }
