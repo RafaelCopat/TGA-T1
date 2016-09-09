@@ -101,7 +101,7 @@ public class Codec {
         bufferedReader = new BufferedReader(new FileReader(fileToBeManaged));
         nextLine = bufferedReader.readLine();
         while (nextLine != null) {
-            codemethod.codeAString(nextLine);
+            codemethod.codeAString(nextLine+'\n');
             nextLine = bufferedReader.readLine();
         }
     }
@@ -109,7 +109,8 @@ public class Codec {
     private void putStringsInMap(CodeMethod codemethod) throws IOException {
         String nextLine = bufferedReader.readLine();
         while (nextLine != null) {
-            codemethod.setStringToMap(nextLine);
+            codemethod.setStringToMap(nextLine+'\n');
+
             nextLine = bufferedReader.readLine();
         }
     }
