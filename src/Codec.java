@@ -22,30 +22,18 @@ public class Codec {
     public String codeFile(CodeMethod codemethod) throws IOException {
         putStringsInMap(codemethod);
         codemethod.generateSymbolNumberHashmap();
-        codeStrings(codemethod);
-        return writeToFile(codemethod);
+        String filepath = codeAndWriteNewFile(codemethod);
+        return filepath;
     }
 
-    private String writeToFile(CodeMethod codemethod) throws IOException {
-        byte[] bytes = codemethod.getCodeLikeByteArray();
-        File outputFile = new File("eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat");
-        DataOutputStream os = new DataOutputStream(new FileOutputStream(
-                outputFile));
-        writeHashmapIfEmpty(codemethod, os, outputFile);
-        os.write(bytes);
-        os.close();
-        return "eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat";
+    private void writeHashmap(CodeMethod codemethod, DataOutputStream os, File outputFile) throws IOException {
+        HashMap<Character, Integer> hashmap = codemethod.getHashMap();
+        os.writeByte(hashmap.size());
+        printHashmapToFile(os, hashmap);
     }
 
-    private void writeHashmapIfEmpty(CodeMethod codemethod, DataOutputStream os, File outputFile) throws IOException {
-            if(outputFile.length() == 0) {
-                HashMap<Character, Integer> hashmap = codemethod.getHashMap();
-                os.writeByte(hashmap.size());
-                printHashmapToFile(os, hashmap);
-            }
-    }
-
-    private void printHashmapToFile(DataOutputStream os, HashMap<Character, Integer> hashmap) throws IOException {
+    private void printHashmapToFile(DataOutputStream os, HashMap<Character, Integer> originalHashmap) throws IOException {
+        HashMap<Character, Integer> hashmap = (HashMap<Character, Integer>) originalHashmap.clone();
         int initialSize = hashmap.size();
         for (int i = 0; i < initialSize; i++) {
             char charToBePrinted = 'a';
@@ -102,22 +90,44 @@ public class Codec {
 
     }
 
-    private void codeStrings(CodeMethod codemethod) throws IOException {
+    private String codeAndWriteNewFile(CodeMethod codemethod) throws IOException {
         String nextLine;
         bufferedReader = new BufferedReader(new FileReader(fileToBeManaged));
         nextLine = bufferedReader.readLine();
+        File outputFile = createFile();
+        DataOutputStream os = getDataOutputStream(outputFile);
+        writeHashmap(codemethod, os, outputFile);
         while (nextLine != null) {
-            codemethod.codeAString(nextLine+'\n');
-            System.out.println("Coding String: "+nextLine);
+            codemethod.codeAString(nextLine + '\n');
+            System.out.println("Coding String: " + nextLine);
+            writeToFile(codemethod, os);
             nextLine = bufferedReader.readLine();
         }
+        os.close();
+        return outputFile.getName();
     }
+
+    private DataOutputStream getDataOutputStream(File outputFile) throws FileNotFoundException {
+        return new DataOutputStream(new FileOutputStream(
+                    outputFile));
+    }
+
+    private File createFile() {
+        return new File("eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat");
+    }
+
+    private String writeToFile(CodeMethod codemethod, DataOutputStream os) throws IOException {
+        byte[] bytes = codemethod.getCodeLikeByteArray();
+        os.write(bytes);
+        return "eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat";
+    }
+
 
     private void putStringsInMap(CodeMethod codemethod) throws IOException {
         String nextLine = bufferedReader.readLine();
         while (nextLine != null) {
-            codemethod.setStringToMap(nextLine+'\n');
-            System.out.println("Putting in map: "+nextLine);
+            codemethod.setStringToMap(nextLine + '\n');
+            System.out.println("Putting in map: " + nextLine);
             nextLine = bufferedReader.readLine();
         }
     }

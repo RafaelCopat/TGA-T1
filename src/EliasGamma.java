@@ -82,6 +82,7 @@ public class EliasGamma implements CodeMethod {
         byte[] bytesInCode = new byte[(int) Math.ceil(codeLength)];//Size of Code/8 (bits of byte)
         for (int nextByte = 0; nextByte < bytesInCode.length; nextByte++)
             putBytesInArray(bytesInCode, nextByte);
+        code = code.substring(((int)codeLength)*8, code.length());
         return bytesInCode;
     }
 
@@ -101,6 +102,7 @@ public class EliasGamma implements CodeMethod {
     }
 
     private void putBytesInArray(byte[] bytesInCode, int nextByte) {
+        //#TODO parts of the bytes are being lost. must program a way to recover them.
         if (!(0 == (code.length() % 8)) && nextByte == bytesInCode.length - 1)
             bytesInCode[nextByte] = getNextNBitsOfCodeThenAddZeros(nextByte, code.length() - nextByte * 8);
         else
