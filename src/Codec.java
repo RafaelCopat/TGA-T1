@@ -54,15 +54,16 @@ public class Codec {
         int charsToBeRead = is.readByte();
         recoverHashmap(is, charsToBeRead, codemethod);
         byte bytes[] = new byte[(int) fileToBeManaged.length() - (1 + charsToBeRead)];
+
         is.read(bytes);
         String codeInBinary = "";
-        String brokenBinary = "";
+        String brokenBinary;
+        FileWriter fw = new FileWriter("decoded_" + fileToBeManaged.getName() + ".txt");
         for (byte partialCode : bytes) {
             brokenBinary = Integer.toBinaryString(partialCode);
             codeInBinary = reforgeBinary(codeInBinary, brokenBinary);
         }
         String decodedText = codemethod.decodeBytes(codeInBinary);
-        FileWriter fw = new FileWriter("decoded_" + fileToBeManaged.getName() + ".txt");
         fw.write(decodedText);
         fw.close();
         return "decoded_" + fileToBeManaged.getName() + ".txt";
@@ -73,12 +74,17 @@ public class Codec {
             codeInBinary += brokenBinary;
         else if (brokenBinary.length() < 8) {
             int initialLength = brokenBinary.length();
-            for (int i = 0; i < 8 - initialLength; i++)
-                brokenBinary = "0" + brokenBinary;
+            brokenBinary = forEachMissingNumberAddZero(brokenBinary, initialLength);
             codeInBinary += brokenBinary;
         } else
             codeInBinary += brokenBinary.substring(24, 32);
         return codeInBinary;
+    }
+
+    private String forEachMissingNumberAddZero(String brokenBinary, int initialLength) {
+        for (int i = 0; i < 8 - initialLength; i++)
+            brokenBinary = "0" + brokenBinary;
+        return brokenBinary;
     }
 
     private void recoverHashmap(DataInputStream is, int charsToBeRead, CodeMethod codeMethod) throws IOException {
@@ -97,14 +103,25 @@ public class Codec {
         File outputFile = createFile();
         DataOutputStream os = getDataOutputStream(outputFile);
         writeHashmap(codemethod, os, outputFile);
-        while (nextLine != null) {
-            codemethod.codeAString(nextLine + '\n');
-            System.out.println("Coding String: " + nextLine);
-            writeToFile(codemethod, os);
-            nextLine = bufferedReader.readLine();
-        }
+        readWriteWholeFile(codemethod, nextLine, os);
         os.close();
         return outputFile.getName();
+    }
+
+    private void readWriteWholeFile(CodeMethod codemethod, String nextLine, DataOutputStream os) throws IOException {
+        while (nextLine != null) {
+            String actualLine = nextLine;
+            nextLine = bufferedReader.readLine();
+            codemethod.codeAString(actualLine + '\n');
+            decideWriteFile(codemethod, nextLine, os);
+        }
+    }
+
+    private void decideWriteFile(CodeMethod codemethod, String nextLine, DataOutputStream os) throws IOException {
+        if(nextLine != null)
+            writeToFile(codemethod, os, false);
+        else
+            writeToFile(codemethod, os, true);
     }
 
     private DataOutputStream getDataOutputStream(File outputFile) throws FileNotFoundException {
@@ -116,8 +133,8 @@ public class Codec {
         return new File("eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat");
     }
 
-    private String writeToFile(CodeMethod codemethod, DataOutputStream os) throws IOException {
-        byte[] bytes = codemethod.getCodeLikeByteArray();
+    private String writeToFile(CodeMethod codemethod, DataOutputStream os, boolean isLastLine) throws IOException {
+        byte[] bytes = codemethod.getCodeLikeByteArray(isLastLine);
         os.write(bytes);
         return "eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat";
     }
@@ -127,7 +144,6 @@ public class Codec {
         String nextLine = bufferedReader.readLine();
         while (nextLine != null) {
             codemethod.setStringToMap(nextLine + '\n');
-            System.out.println("Putting in map: " + nextLine);
             nextLine = bufferedReader.readLine();
         }
     }

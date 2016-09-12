@@ -11,7 +11,7 @@ public interface CodeMethod {
 
     void codeAString(String ab);
 
-    byte[] getCodeLikeByteArray();
+    byte[] getCodeLikeByteArray(boolean flagIsLastLine);
 
     void recoverHashmap(String string);
 

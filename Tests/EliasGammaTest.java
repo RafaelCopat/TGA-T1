@@ -50,7 +50,7 @@ public class EliasGammaTest {
     @Test
     public void codeABConvertToByte() {
         eliasGamma.codeAString("ab");
-        byte bytes[] = eliasGamma.getCodeLikeByteArray();
+        byte bytes[] = eliasGamma.getCodeLikeByteArray(true);
         assertEquals(-96, bytes[0]);
 
     }
@@ -58,7 +58,7 @@ public class EliasGammaTest {
     @Test
     public void codeBACDEConvertToByte() {
         eliasGamma.codeAString("bacde");
-        byte bytes[] = eliasGamma.getCodeLikeByteArray();
+        byte bytes[] = eliasGamma.getCodeLikeByteArray(true);
         int sum = 0;
         for (int i = 0; i < bytes.length; i++) {
             sum += bytes[i];
@@ -69,7 +69,7 @@ public class EliasGammaTest {
     @Test
     public void codeAllBytes() {
         eliasGamma.codeAString("ebbbbbbaaaaaaaaaaaaaaaacccdd");
-        byte bytes[] = eliasGamma.getCodeLikeByteArray();
+        byte bytes[] = eliasGamma.getCodeLikeByteArray(true);
         int sum = 0;
         for (int i = 0; i < bytes.length; i++) {
             sum += bytes[i];

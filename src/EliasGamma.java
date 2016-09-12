@@ -77,12 +77,17 @@ public class EliasGamma implements CodeMethod {
         return code;
     }
 
-    public byte[] getCodeLikeByteArray() {
+    public byte[] getCodeLikeByteArray(boolean flagIsLastLine) {
         double codeLength = code.length() / 8.0;
-        byte[] bytesInCode = new byte[(int) Math.ceil(codeLength)];//Size of Code/8 (bits of byte)
+        int byteArrayLength = ((int) Math.ceil(codeLength));
+        byte[] bytesInCode;//Size of Code/8 (bits of byte)
+        if(!flagIsLastLine)
+            byteArrayLength--;
+        bytesInCode = new byte[byteArrayLength];
         for (int nextByte = 0; nextByte < bytesInCode.length; nextByte++)
-            putBytesInArray(bytesInCode, nextByte);
-        code = code.substring(((int)codeLength)*8, code.length());
+            putBytesInArray(bytesInCode, nextByte, flagIsLastLine);
+        if(!flagIsLastLine)
+             code = code.substring(byteArrayLength*8, code.length());
         return bytesInCode;
     }
 
@@ -101,9 +106,9 @@ public class EliasGamma implements CodeMethod {
         return symbolNumberHashmap;
     }
 
-    private void putBytesInArray(byte[] bytesInCode, int nextByte) {
+    private void putBytesInArray(byte[] bytesInCode, int nextByte, boolean flagIsLastLine) {
         //#TODO parts of the bytes are being lost. must program a way to recover them.
-        if (!(0 == (code.length() % 8)) && nextByte == bytesInCode.length - 1)
+        if (flagIsLastLine && nextByte == bytesInCode.length - 1)
             bytesInCode[nextByte] = getNextNBitsOfCodeThenAddZeros(nextByte, code.length() - nextByte * 8);
         else
             bytesInCode[nextByte] = getNext8BitsOfCode(nextByte);
@@ -123,6 +128,7 @@ public class EliasGamma implements CodeMethod {
         int zerosCount = 0;
         String textResult = "";
         String binaryResult = "";
+        char key;
         for (int i = 0; i < byteString.length(); i++)
             if (byteString.charAt(i) == '0')
                 zerosCount++;
@@ -132,19 +138,19 @@ public class EliasGamma implements CodeMethod {
                     i++;
                     binaryResult += byteString.charAt(i);
                 }
-                textResult = getKeyInHashmap(textResult, binaryResult);
+                key = getKeyInHashmap(binaryResult);
+                textResult += key;
                 binaryResult = "";
                 zerosCount = 0;
             }
-        return textResult;
+        return textResult; //never reached?
     }
 
-    private String getKeyInHashmap(String textResult, String binaryResult) {
+    private char getKeyInHashmap(String binaryResult) {
         for (char key : symbolNumberHashmap.keySet())
             if (symbolNumberHashmap.get(key) == Integer.parseInt(binaryResult, 2)) {
-                textResult += key;
-                break;
+                return key;
             }
-        return textResult;
+        return ' ';
     }
 }

@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fe29f7b-b5a7-4153-b599-41e0b6ecf350" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eliasgamma_hugefile.dat" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eliasgamma_loremipsumnewline.dat" afterPath="$PROJECT_DIR$/eliasgamma_loremipsumnewline.dat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TeoriaInformacao/CodeMethod.class" afterPath="$PROJECT_DIR$/out/production/TeoriaInformacao/CodeMethod.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TeoriaInformacao/Codec.class" afterPath="$PROJECT_DIR$/out/production/TeoriaInformacao/Codec.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TeoriaInformacao/EliasGamma.class" afterPath="$PROJECT_DIR$/out/production/TeoriaInformacao/EliasGamma.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/TeoriaInformacao/CodecTester.class" afterPath="$PROJECT_DIR$/out/test/TeoriaInformacao/CodecTester.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/TeoriaInformacao/EliasGammaTest.class" afterPath="$PROJECT_DIR$/out/test/TeoriaInformacao/EliasGammaTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/CodecTester.java" afterPath="$PROJECT_DIR$/Tests/CodecTester.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tests/EliasGammaTest.java" afterPath="$PROJECT_DIR$/Tests/EliasGammaTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/decoded_eliasgamma_loremipsumnewline.dat.txt" afterPath="$PROJECT_DIR$/decoded_eliasgamma_loremipsumnewline.dat.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hugefile.txt" afterPath="$PROJECT_DIR$/hugefile.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CodeMethod.java" afterPath="$PROJECT_DIR$/src/CodeMethod.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Codec.java" afterPath="$PROJECT_DIR$/src/Codec.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/EliasGamma.java" afterPath="$PROJECT_DIR$/src/EliasGamma.java" />
     </list>
@@ -25,7 +33,7 @@
     <SUITE FILE_PATH="coverage/TeoriaInformacao$EliasGammaTest_codeABConvertToByte.coverage" NAME="EliasGammaTest.codeABConvertToByte Coverage Results" MODIFIED="1473361847562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/TeoriaInformacao$CodecTester_decodeBACDEWriteFile.coverage" NAME="CodecTester.decodeBACDEWriteFile Coverage Results" MODIFIED="1473449285130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/TeoriaInformacao$LogarithmTest_zeroLogOfTwo.coverage" NAME="LogarithmTest.zeroLogOfTwo Coverage Results" MODIFIED="1473188883095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/TeoriaInformacao$All_in_TeoriaInformacao.coverage" NAME="All in TeoriaInformacao Coverage Results" MODIFIED="1473447175971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/TeoriaInformacao$All_in_TeoriaInformacao.coverage" NAME="All in TeoriaInformacao Coverage Results" MODIFIED="1473709095509" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,11 +44,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CodecTester.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CodecTester.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/CodecTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-847">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="463">
+              <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -51,11 +59,45 @@
       <file leaf-file-name="Codec.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Codec.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
+            <state relative-caret-position="495">
+              <caret line="144" column="34" selection-start-line="144" selection-start-column="34" selection-end-line="144" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestCase.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/TestCase.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+              <folding>
+                <element signature="e#3406#3407#0" expanded="true" />
+                <element signature="e#5579#5580#0" expanded="true" />
+                <element signature="e#5632#5633#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EliasGammaTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/EliasGammaTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CodeMethod.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/CodeMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,16 +115,9 @@
       <file leaf-file-name="ParentRunner.class" pinned="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="3145">
               <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-              <folding>
-                <element signature="e#2137#2138#0" expanded="true" />
-                <element signature="e#2181#2182#0" expanded="true" />
-                <element signature="e#5891#6026#0" expanded="true" />
-                <element signature="e#6025#6026#0" expanded="true" />
-                <element signature="e#6429#6593#0" expanded="true" />
-                <element signature="e#6592#6593#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,24 +125,19 @@
       <file leaf-file-name="JUnitCore.class" pinned="false" current-in-tab="false">
         <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
+            <state relative-caret-position="918">
               <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EliasGamma.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EliasGamma.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EliasGamma.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="104" column="86" selection-start-line="104" selection-start-column="86" selection-end-line="104" selection-end-column="86" />
-              <folding>
-                <element signature="e#998#999#0" expanded="true" />
-                <element signature="e#1073#1074#0" expanded="true" />
-                <element signature="e#3179#3180#0" expanded="true" />
-                <element signature="e#3221#3222#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-64">
+              <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,9 +172,9 @@
         <option value="$PROJECT_DIR$/src/FakeLogarithm.java" />
         <option value="$PROJECT_DIR$/src/CodeMethod.java" />
         <option value="$PROJECT_DIR$/Tests/EliasGammaTest.java" />
-        <option value="$PROJECT_DIR$/Tests/CodecTester.java" />
-        <option value="$PROJECT_DIR$/src/Codec.java" />
         <option value="$PROJECT_DIR$/src/EliasGamma.java" />
+        <option value="$PROJECT_DIR$/src/Codec.java" />
+        <option value="$PROJECT_DIR$/Tests/CodecTester.java" />
       </list>
     </option>
   </component>
@@ -186,10 +216,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches">
         <subPane />
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -618,10 +648,10 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in TeoriaInformacao" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CodecTester.codeBACDEWriteFile" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CodecTester.decodeBACDEWriteFile" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CodecTester.codeDecodeHugeFile" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CodecTester.codeLoremWithNewLines" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CodecTester.codeLoremWithNewLines" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CodecTester.codeBACDEWriteFile" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CodecTester.decodeBACDEWriteFile" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CodecTester.codeDecodeHugeFile" />
       </list>
     </recent_temporary>
   </component>
@@ -642,35 +672,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_TeoriaInformacao - 2016.09.09 at 17h 55m 25s.xml">
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 44m 42s.xml">
       <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_TeoriaInformacao - 2016.09.09 at 17h 57m 02s.xml">
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 44m 52s.xml">
       <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CodecTester_codeBACDEWriteFile - 2016.09.09 at 17h 48m 42s.xml">
-      <configuration name="CodecTester.codeBACDEWriteFile" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 44m 55s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CodecTester_codeBACDEWriteFile - 2016.09.09 at 17h 49m 01s.xml">
-      <configuration name="CodecTester.codeBACDEWriteFile" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 45m 01s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CodecTester_codeBACDEWriteFile - 2016.09.09 at 17h 49m 06s.xml">
-      <configuration name="CodecTester.codeBACDEWriteFile" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 47m 13s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CodecTester_codeBACDEWriteFile - 2016.09.09 at 17h 49m 19s.xml">
-      <configuration name="CodecTester.codeBACDEWriteFile" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 47m 45s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CodecTester_codeBACDEWriteFile - 2016.09.09 at 17h 49m 33s.xml">
-      <configuration name="CodecTester.codeBACDEWriteFile" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 48m 09s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CodecTester_codeBACDEWriteFile - 2016.09.09 at 17h 49m 46s.xml">
-      <configuration name="CodecTester.codeBACDEWriteFile" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 48m 48s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CodecTester_codeBACDEWriteFile - 2016.09.09 at 17h 50m 56s.xml">
-      <configuration name="CodecTester.codeBACDEWriteFile" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 55m 46s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CodecTester_codeBACDEWriteFile - 2016.09.09 at 17h 55m 18s.xml">
-      <configuration name="CodecTester.codeBACDEWriteFile" configurationId="JUnit" />
+    <history-entry file="All_in_TeoriaInformacao - 2016.09.12 at 16h 58m 47s.xml">
+      <configuration name="All in TeoriaInformacao" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -693,9 +723,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15901455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15789473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -712,6 +742,33 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22172453" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15901455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294621" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32922733" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13753057" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -729,15 +786,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Codec.java</url>
-          <line>126</line>
-          <properties />
-          <option name="timeStamp" value="62" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="63" />
+      <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -746,6 +795,58 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Tests/CodecTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3179">
+          <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EliasGamma.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CodeMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -758,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,13 +1024,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/TestCase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/FakeLogarithmTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -942,15 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CodeMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -958,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -966,22 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/EliasGammaTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="64" column="9" selection-start-line="64" selection-start-column="9" selection-end-line="64" selection-end-column="9" />
-          <folding>
-            <element signature="e#793#794#0" expanded="true" />
-            <element signature="e#837#838#0" expanded="true" />
-            <element signature="e#2043#2044#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-            <element signature="e#2147#2148#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -989,7 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,7 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,10 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding>
-            <element signature="e#4643#4644#0" expanded="true" />
-            <element signature="e#4707#4708#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1024,32 +1084,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
+        <state relative-caret-position="3145">
           <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-          <folding>
-            <element signature="e#2137#2138#0" expanded="true" />
-            <element signature="e#2181#2182#0" expanded="true" />
-            <element signature="e#5891#6026#0" expanded="true" />
-            <element signature="e#6025#6026#0" expanded="true" />
-            <element signature="e#6429#6593#0" expanded="true" />
-            <element signature="e#6592#6593#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Codec.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="105" column="19" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="918">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1061,33 +1111,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/CodecTester.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/junit/framework/TestCase.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-847">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="223">
+          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <element signature="e#3406#3407#0" expanded="true" />
+            <element signature="e#5579#5580#0" expanded="true" />
+            <element signature="e#5632#5633#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Codec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="144" column="34" selection-start-line="144" selection-start-column="34" selection-end-line="144" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
+    <entry file="file://$PROJECT_DIR$/src/EliasGamma.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state relative-caret-position="-64">
+          <caret line="109" column="4" selection-start-line="109" selection-start-column="4" selection-end-line="109" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EliasGamma.java">
+    <entry file="file://$PROJECT_DIR$/src/CodeMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="104" column="86" selection-start-line="104" selection-start-column="86" selection-end-line="104" selection-end-column="86" />
+        <state relative-caret-position="221">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/EliasGammaTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/CodecTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
           <folding>
-            <element signature="e#998#999#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#3179#3180#0" expanded="true" />
-            <element signature="e#3221#3222#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

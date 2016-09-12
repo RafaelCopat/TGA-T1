@@ -107,19 +107,9 @@ public class CodecTester {
 
     @Ignore
     @Test
-    public void codeDecodeHugeFile() throws IOException{
+    public void codeLargerFile() throws IOException{
         file = new File("hugefile.txt");
         codec.setFile(file);
         file = new File(codec.codeFile(eliasgamma));
-        codec.setFile(file);
-        file = new File(codec.decodeFile(eliasgamma));
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String nextLine = br.readLine();
-        String text = "";
-        while (nextLine != null) {
-            text += nextLine+'\n';
-            nextLine = br.readLine();
-        }
-        System.out.println(text);
     }
 }
