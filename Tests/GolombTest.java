@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
  * Created by I852780 on 06/09/2016.
  */
 public class GolombTest {
+    //With M = 4
     private Golomb golomb;
 
     @Before
@@ -33,5 +34,15 @@ public class GolombTest {
     public void codeBACDE(){
         golomb.codeAString("bacde");
         assertEquals("0010000100111000", golomb.getCode());
+    }
+
+    @Test
+    public void decode000(){
+        assertEquals("a", golomb.decodeBytes("000"));
+    }
+
+    @Test
+    public void decode000001(){
+        assertEquals("ab", golomb.decodeBytes("000"));
     }
 }

@@ -46,4 +46,8 @@ public class EliasGamma extends AbstractCode {
             }
         return textResult; //never reached?
     }
+
+    public String toString() {
+        return "eliasgamma_";
+    }
 }

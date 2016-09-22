@@ -9,9 +9,7 @@ public class Codec {
     private File fileToBeManaged;
     private BufferedReader bufferedReader;
 
-    public Codec(File file) throws FileNotFoundException {
-        this.fileToBeManaged = file;
-        setBufferedReader();
+    public Codec(){
     }
 
     private void setBufferedReader() throws FileNotFoundException {
@@ -104,7 +102,7 @@ public class Codec {
         String nextLine;
         bufferedReader = new BufferedReader(new FileReader(fileToBeManaged));
         nextLine = bufferedReader.readLine();
-        File outputFile = createFile();
+        File outputFile = createFile(codemethod.toString());
         DataOutputStream os = getDataOutputStream(outputFile);
         writeHashmap(codemethod, os, outputFile);
         readWriteWholeFile(codemethod, nextLine, os);
@@ -133,14 +131,14 @@ public class Codec {
                     outputFile));
     }
 
-    private File createFile() {
-        return new File("eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat");
+    private File createFile(String codemethodName) {
+        return new File(codemethodName + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat");
     }
 
     private String writeToFile(CodeMethod codemethod, DataOutputStream os, boolean isLastLine) throws IOException {
         byte[] bytes = codemethod.getCodeLikeByteArray(isLastLine);
         os.write(bytes);
-        return "eliasgamma_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat";
+        return codemethod.toString() + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat";
     }
 
 

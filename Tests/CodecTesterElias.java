@@ -10,7 +10,7 @@ import static junit.framework.TestCase.assertEquals;
 /**
  * Created by I852780 on 08/09/2016.
  */
-public class CodecTester {
+public class CodecTesterElias {
 
     private Codec codec;
     private File file;
@@ -19,12 +19,13 @@ public class CodecTester {
     @Before
     public void setUp() throws Exception {
         eliasgamma = new EliasGamma();
-        file = new File("texto.txt");
-        codec = new Codec(file);
+        codec = new Codec();
     }
 
     @Test
     public void codeAWriteFile() throws IOException {
+        file = new File("texto.txt");
+        codec.setFile(file);
         file = new File(codec.codeFile(eliasgamma));
         DataInputStream is = new DataInputStream(new FileInputStream(file));
         byte[] bytesInFile = new byte[(int)file.length()];
