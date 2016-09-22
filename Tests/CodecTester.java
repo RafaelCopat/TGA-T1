@@ -107,9 +107,11 @@ public class CodecTester {
 
     @Ignore
     @Test
-    public void codeLargerFile() throws IOException{
+    public void codeDecodeLargerFile() throws IOException{
         file = new File("hugefile.txt");
         codec.setFile(file);
         file = new File(codec.codeFile(eliasgamma));
+        codec.setFile(file);
+        file = new File(codec.decodeFile(eliasgamma));
     }
 }

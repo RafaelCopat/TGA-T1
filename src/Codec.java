@@ -53,8 +53,13 @@ public class Codec {
         DataInputStream is = new DataInputStream(new FileInputStream(fileToBeManaged));
         int charsToBeRead = is.readByte();
         recoverHashmap(is, charsToBeRead, codemethod);
-        byte bytes[] = new byte[(int) fileToBeManaged.length() - (1 + charsToBeRead)];
+        decodeWriteFile(codemethod, is, charsToBeRead);
+        return "decoded_" + fileToBeManaged.getName() + ".txt";
+    }
 
+    private void decodeWriteFile(CodeMethod codemethod, DataInputStream is, int charsToBeRead) throws IOException {
+        codemethod.cleanCode();
+        byte bytes[] = new byte[(int) fileToBeManaged.length() - (1 + charsToBeRead)];
         is.read(bytes);
         String codeInBinary = "";
         String brokenBinary;
@@ -66,7 +71,6 @@ public class Codec {
         String decodedText = codemethod.decodeBytes(codeInBinary);
         fw.write(decodedText);
         fw.close();
-        return "decoded_" + fileToBeManaged.getName() + ".txt";
     }
 
     private String reforgeBinary(String codeInBinary, String brokenBinary) {

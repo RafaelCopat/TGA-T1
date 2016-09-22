@@ -17,5 +17,7 @@ public interface CodeMethod {
 
     HashMap<Character, Integer> getHashMap();
 
-    public String decodeBytes(String string);
+    String decodeBytes(String string);
+
+    void cleanCode();
 }

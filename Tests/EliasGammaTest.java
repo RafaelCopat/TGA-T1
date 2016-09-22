@@ -92,7 +92,6 @@ public class EliasGammaTest {
         assertEquals("ebbbbbbaaaaaaaaaaaaaaaacccdd",
                 eliasGamma.decodeBytes("0010101001001001001001011111111111111110110110110010000100"));
     }
-
 }
 
 
