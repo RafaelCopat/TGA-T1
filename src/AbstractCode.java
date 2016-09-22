@@ -3,7 +3,7 @@ import java.util.HashMap;
 /**
  * Created by I852780 on 22/09/2016.
  */
-public class AbstractCode implements CodeMethod {
+public abstract class AbstractCode implements CodeMethod {
 
     protected String code;
     protected HashMap<Character, Integer> frequencyHashmap;
@@ -54,11 +54,6 @@ public class AbstractCode implements CodeMethod {
 
     public String getCode() {
         return code;
-    }
-
-    @Override
-    public void codeAString(String ab) {
-
     }
 
     @Override
@@ -117,11 +112,6 @@ public class AbstractCode implements CodeMethod {
         return symbolNumberHashmap;
     }
 
-    @Override
-    public String decodeBytes(String string) {
-        return null;
-    }
-
     protected char getKeyInHashmap(String binaryResult) {
         for (char key : symbolNumberHashmap.keySet())
             if (symbolNumberHashmap.get(key) == Integer.parseInt(binaryResult, 2)) {
@@ -134,4 +124,7 @@ public class AbstractCode implements CodeMethod {
     public void cleanCode(){
         code = "";
     }
+
+    public abstract String decodeBytes(String string);
+    public abstract void codeAString(String ab);
 }
