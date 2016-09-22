@@ -39,12 +39,12 @@ public class EliasGamma extends AbstractCode {
                     i++;
                     binaryResult += code.charAt(i);
                 }
-                key = getKeyInHashmap(binaryResult);
+                key = getKeyInHashmap(Integer.parseInt(binaryResult, 2));
                 textResult += key;
                 binaryResult = "";
                 zerosCount = 0;
             }
-        return textResult; //never reached?
+        return textResult;
     }
 
     public String toString() {

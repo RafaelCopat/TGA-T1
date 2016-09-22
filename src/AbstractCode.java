@@ -112,9 +112,9 @@ public abstract class AbstractCode implements CodeMethod {
         return symbolNumberHashmap;
     }
 
-    protected char getKeyInHashmap(String binaryResult) {
+    protected char getKeyInHashmap(int keyNumber) {
         for (char key : symbolNumberHashmap.keySet())
-            if (symbolNumberHashmap.get(key) == Integer.parseInt(binaryResult, 2)) {
+            if (symbolNumberHashmap.get(key) == keyNumber) {
                 return key;
             }
         return ' ';

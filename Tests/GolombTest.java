@@ -43,6 +43,11 @@ public class GolombTest {
 
     @Test
     public void decode000001(){
-        assertEquals("ab", golomb.decodeBytes("000"));
+        assertEquals("ab", golomb.decodeBytes("000001"));
+    }
+
+    @Test
+    public void decode0010000100111000(){
+        assertEquals("bacde", golomb.decodeBytes("0010000100111000"));
     }
 }

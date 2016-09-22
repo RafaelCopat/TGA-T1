@@ -36,12 +36,13 @@ public class CodecTesterGolomb {
         assertEquals(113, sum);
     }
 
-    @Ignore
     @Test
     public void codeLoremIpsum() throws IOException {
         file = new File("loremipsum.txt");
         codec.setFile(file);
         file = new File(codec.codeFile(golomb));
+        codec.setFile(file);
+        file = new File(codec.decodeFile(golomb));
         BufferedReader br = new BufferedReader(new FileReader(file));
         assertEquals("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum, mi gravida viverra varius, purus eros dictum sem, in maximus lorem leo id nisi."
                 , br.readLine());
