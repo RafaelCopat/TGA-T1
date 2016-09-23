@@ -52,7 +52,7 @@ public class Codec {
         int charsToBeRead = is.readByte();
         recoverHashmap(is, charsToBeRead, codemethod);
         decodeWriteFile(codemethod, is, charsToBeRead);
-        return "decoded_" + fileToBeManaged.getName() + ".txt";
+        return "decoded_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".txt";
     }
 
     private void decodeWriteFile(CodeMethod codemethod, DataInputStream is, int charsToBeRead) throws IOException {
@@ -61,7 +61,7 @@ public class Codec {
         is.read(bytes);
         String codeInBinary = "";
         String brokenBinary;
-        FileWriter fw = new FileWriter("decoded_" + fileToBeManaged.getName() + ".txt");
+        FileWriter fw = new FileWriter("decoded_" + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".txt");
         for (byte partialCode : bytes) {
             brokenBinary = Integer.toBinaryString(partialCode);
             codeInBinary = reforgeBinary(codeInBinary, brokenBinary);
@@ -132,7 +132,8 @@ public class Codec {
     }
 
     private File createFile(String codemethodName) {
-        return new File(codemethodName + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat");
+        String filePath = codemethodName + fileToBeManaged.getName().substring(0, fileToBeManaged.getName().length() - 4) + ".dat";
+        return new File(filePath);
     }
 
     private String writeToFile(CodeMethod codemethod, DataOutputStream os, boolean isLastLine) throws IOException {
