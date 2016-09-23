@@ -8,18 +8,21 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String args[]){
-        System.out.println("Set the File's Path:");
         Scanner scanner = new Scanner(System.in);
-        String filepath = scanner.next();
-        File file = new File(filepath);
+        String flag = getCodeOption(scanner);
+        File file = getFile(scanner);
         CodeMethod codeMethod = chooseCodeMethod(scanner);
         Codec codec = new Codec();
         try {
             codec.setFile(file);
-            file = new File(codec.codeFile(codeMethod));
-            codec.setFile(file);
-            codec.decodeFile(codeMethod);
-            System.out.println("File coded and decoded with success.");
+            if(flag.compareTo("1") == 0) {
+                codec.codeFile(codeMethod);
+                System.out.println("File coded with success.");
+            }
+            else {
+                codec.decodeFile(codeMethod);
+                System.out.println("File decoded with success.");
+            }
         }
         catch (FileNotFoundException e){
             System.out.println("File not found");
@@ -28,7 +31,27 @@ public class Main {
             System.out.println("Error in reading/writing File");
             e.printStackTrace();
         }
+    }
+    private static String getCodeOption(Scanner scanner) {
+        System.out.println("Are you trying to code or decode a file?:" + '\n' + "1 - Code" + '\n' + "2 - Decode");
+        String flag = "";
+        do {
+            flag = scanner.next();
+            if (flag.compareTo("1") == 0)
+                flag = "1";
+            else if (flag.compareTo("2") == 0)
+                flag = "2";
+            else {
+                System.out.println("Please choose a valid option");
+            }
+        } while(flag.compareTo("1") != 0 && flag.compareTo("2") != 0);
+        return flag;
+    }
 
+    private static File getFile(Scanner scanner) {
+        System.out.println("Set the File's Path:");
+        String filepath = scanner.next();
+        return new File(filepath);
     }
 
     private static CodeMethod chooseCodeMethod(Scanner scanner) {
