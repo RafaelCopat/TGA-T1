@@ -31,23 +31,28 @@ public class GolombTest {
     }
 
     @Test
-    public void codeBACDE(){
+    public void codeBACDE() {
         golomb.codeAString("bacde");
         assertEquals("0010000100111000", golomb.getCode());
     }
 
     @Test
-    public void decode000(){
+    public void decode000() {
         assertEquals("a", golomb.decodeBytes("000"));
     }
 
     @Test
-    public void decode000001(){
+    public void decode000001() {
         assertEquals("ab", golomb.decodeBytes("000001"));
     }
 
     @Test
-    public void decode0010000100111000(){
+    public void decode0010000100111000() {
         assertEquals("bacde", golomb.decodeBytes("0010000100111000"));
+    }
+
+    @Test
+    public void decode1000() {
+        assertEquals("e", golomb.decodeBytes("1000"));
     }
 }

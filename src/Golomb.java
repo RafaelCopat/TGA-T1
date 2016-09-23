@@ -17,16 +17,25 @@ public class Golomb extends AbstractCode {
         String textResult = "";
         String binaryResult = "";
         char key;
+        textResult = loopCode(oneCount, textResult, binaryResult);
+        return textResult;
+    }
+
+    private String loopCode(int oneCount, String textResult, String binaryResult) {
+        char key;
         for (int i = 0; i < code.length(); i++)
             if (code.charAt(i) == '1')
                 oneCount++;
             else {
-                for (int j = 0; j < m/2; j++) {
+                for (int j = 0; j < m / 2; j++) {
                     i++;
+                    if(!(i < code.length()))
+                        return textResult;
                     binaryResult += code.charAt(i);
+
                 }
                 //Quotient * 4 + Remainder + 1 (Last one to find on the hashmap)
-                key = getKeyInHashmap(oneCount*4 + Integer.parseInt(binaryResult, 2) + 1);
+                key = getKeyInHashmap(oneCount * 4 + Integer.parseInt(binaryResult, 2) + 1);
                 textResult += key;
                 binaryResult = "";
                 oneCount = 0;
