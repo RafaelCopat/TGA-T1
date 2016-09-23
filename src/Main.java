@@ -19,6 +19,7 @@ public class Main {
             file = new File(codec.codeFile(codeMethod));
             codec.setFile(file);
             codec.decodeFile(codeMethod);
+            System.out.println("File coded and decoded with success.");
         }
         catch (FileNotFoundException e){
             System.out.println("File not found");
